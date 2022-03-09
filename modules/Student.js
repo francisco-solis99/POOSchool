@@ -1,6 +1,6 @@
 // @ts-check
 /** Class representing a student*/
-class Student {
+export default class Student {
   /**
    * Student constructor
    *

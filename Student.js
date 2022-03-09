@@ -1,7 +1,18 @@
+// @ts-check
+/** Class representing a student*/
 class Student {
+  /**
+   * Student constructor
+   *
+   * @param {Object} obj - An object.
+   * @param {String} obj.name - Name of student
+   * @param {String} obj.username - User name of the student
+   * @param {String} obj.twitter - Students' twitter account
+   * @param {Array<String>} obj.approvedCourses - Students' twitter account
+   * @param {Array<String>} obj.learningPaths - Students' twitter account
+   */
   constructor({
     name,
-    points = 0,
     username = undefined,
     twitter = undefined,
     approvedCourses = [],
@@ -10,7 +21,6 @@ class Student {
   })
   {
     this.name = name;
-    this.points = points;
     this.username = username;
     this.twitter = twitter;
     this.approvedCourses = approvedCourses;
@@ -22,7 +32,7 @@ class Student {
 const juan = new Student({
   name: 'Juan',
   username: 'astra.exe',
-  approvedCoursed: [],
+  approvedCourses: [],
   learningPaths: [],
   twitter: '@astra'
 });

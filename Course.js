@@ -35,4 +35,6 @@ const POOCourse = new Course({
   modules: 4,
   timeToFinish: 3,
   rate: 5
-})
+});
+
+

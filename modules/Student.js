@@ -8,8 +8,8 @@ class Student {
    * @param {String} obj.name - Name of student
    * @param {String} obj.username - User name of the student
    * @param {String} obj.twitter - Students' twitter account
-   * @param {Array<String>} obj.approvedCourses - Students' twitter account
-   * @param {Array<String>} obj.learningPaths - Students' twitter account
+   * @param {Array<String>} obj.approvedCourses - Approved courses by student
+   * @param {Array<String>} obj.learningPaths - Student learning paths
    */
   constructor({
     name,
@@ -17,7 +17,6 @@ class Student {
     twitter = undefined,
     approvedCourses = [],
     learningPaths = []
-
   })
   {
     this.name = name;

@@ -49,29 +49,3 @@ export class School {
   }
 
 }
-
-const webSchool = new School({
-  name: 'Web School',
-  courses: ['Curso de HTML', 'Curso de CSS', 'Curso de JS', 'Curso de React'],
-  timeToPass: 3
-});
-console.log(webSchool);
-
-
-// Create multiple schhols
-// const params = [
-//   {
-//     name: 'Web School',
-//     courses: ['Curso de HTML', 'Curso de CSS', 'Curso de JS', 'Curso de React'],
-//     timeToPass: 3
-//   },
-//   {
-//     name: 'Web School',
-//     courses: ['Curso de CSS', 'Curso de JS', 'Curso de React'],
-//     timeToPass: 4
-//   }
-// ]
-
-// const schools = params.map(element => new School(element));
-
-// console.log(schools);

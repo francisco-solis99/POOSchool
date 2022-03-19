@@ -3,9 +3,6 @@ import { ExpertStudent } from "./modules/ExpertStudent.js"
 import { School } from "./modules/School.js"
 import { Course } from "./modules/Course.js"
 
-
-
-
 const htmlCourse = new Course({
     name: 'HTML Course',
     teacher: 'Diego de Granda',

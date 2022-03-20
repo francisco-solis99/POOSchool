@@ -49,18 +49,18 @@ export class Student {
     }
     this.coursesInProgress.push(course);
   }
+
+  approveCourse(courseName){
+    const courseIndex = this.coursesInProgress.findIndex(element => element.name === courseName);
+    if(courseIndex === -1) return console.info('🤔You have not taken this course');
+
+    const course = this.coursesInProgress[courseIndex];
+    if(!course.isDone) return console.info('🤔You have not finished this course');
+
+    this.approvedCourses.push(course);
+    console.info(`🎉You have approved the ${course.name}`);
+    this.coursesInProgress.splice(courseIndex, 1);
+  }
 }
 
 
-
-// craete a instance
-const juan = new Student({
-  name: 'Juan',
-  username: 'astra.exe',
-  approvedCourses: [],
-  learningPaths: [],
-  coursesInProgress: [],
-  twitter: '@astra'
-});
-
-console.table(juan);

@@ -19,11 +19,22 @@ const cssCourse = new Course({
   courseTime : 3,
 });
 
+const POOCourse = new Course({
+  name: 'POO with JS',
+  teacher: 'JuanDc',
+  modules: 4,
+  isFree: false,
+  courseTime: 3,
+  rate: 5
+});
+
 const webSchool = new School({
   name: 'Web School',
   courses: [htmlCourse, cssCourse],
   timeToPass: 3
 });
+
+webSchool.addCourse(POOCourse);
 
 
 // craete a students instances
@@ -36,7 +47,7 @@ const juan = new FreeStudent({
   twitter: '@astra'
 });
 
-// console.log(juan);
+console.log(juan);
 // juan.takeCourse(htmlCourse);
 
 
@@ -49,5 +60,10 @@ const sebas = new ExpertStudent({
   twitter: '@sopi'
 });
 
-console.log(sebas.coursesInProgress[0]);
+console.log(sebas);
+
+// prube when the user get pass siome course
+sebas.coursesInProgress[1].finishCourse(); //finish the css course, chance it state isDone
+sebas.approveCourse('CSS Course'); //pass to pass courses list
+console.log(sebas); //check if the course is approved
 // console.log(sebas.getPaths());

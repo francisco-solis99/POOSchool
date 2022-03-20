@@ -16,7 +16,7 @@ export class FreeStudent extends Student {
   }
 
   addPath(){
-    console.log('Sorry 😢 To take this course begin your path with the Expert Plan');;
+    console.log('Sorry 😢 To add paths begin your path with the Expert Plan');;
   }
 }
 

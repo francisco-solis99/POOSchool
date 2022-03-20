@@ -44,13 +44,6 @@ export class Course {
 
 }
 
-const POOCourse = new Course({
-  name: 'POO with JS',
-  teacher: 'JuanDc',
-  modules: 4,
-  isFree: false,
-  courseTime: 3,
-  rate: 5
-});
+
 
 

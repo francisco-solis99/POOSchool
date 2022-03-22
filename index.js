@@ -2,6 +2,7 @@ import { FreeStudent } from "./modules/FreeStudent.js"
 import { ExpertStudent } from "./modules/ExpertStudent.js"
 import { School } from "./modules/School.js"
 import { Course } from "./modules/Course.js"
+import {Teacher} from "./modules/Teacher.js"
 
 const htmlCourse = new Course({
     name: 'HTML Course',
@@ -47,7 +48,10 @@ const juan = new FreeStudent({
   twitter: '@astra'
 });
 
+console.group('Juan => basic student');
 console.log(juan);
+console.log(juan.postComment('I love this course like eat 🍕 as well'));
+console.groupEnd();
 // juan.takeCourse(htmlCourse);
 
 
@@ -60,10 +64,27 @@ const sebas = new ExpertStudent({
   twitter: '@sopi'
 });
 
+console.group('Sebas => expert student');
 console.log(sebas);
-
 // prube when the user get pass siome course
 sebas.coursesInProgress[1].finishCourse(); //finish the css course, chance it state isDone
 sebas.approveCourse('CSS Course'); //pass to pass courses list
 console.log(sebas); //check if the course is approved
 // console.log(sebas.getPaths());
+console.groupEnd();
+
+
+const manz = new Teacher({
+  name: 'manz',
+  username: 'manzDev',
+  approvedCourses: [],
+  learningPaths: [webSchool],
+  coursesInProgress: [],
+  twitter: '@manzDev'
+});
+
+
+console.group('manz => teacher');
+console.log(manz);
+console.log(manz.postComment('Please follow all the pathway courses🚗'));
+console.groupEnd();

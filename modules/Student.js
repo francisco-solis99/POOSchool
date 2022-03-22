@@ -1,4 +1,5 @@
 import { School } from "./School.js";
+import {Comment} from "./Comment.js";
 // @ts-check
 /** Class representing a student*/
 export class Student {
@@ -60,6 +61,16 @@ export class Student {
     this.approvedCourses.push(course);
     console.info(`🎉You have approved the ${course.name}`);
     this.coursesInProgress.splice(courseIndex, 1);
+  }
+
+  postComment(commentContent){
+    const comment = new Comment({
+      content: commentContent,
+      studentName: this.name,
+      studentRole: 'Student',
+      date: new Date().toLocaleString(),
+    });
+    comment.publicar();
   }
 }
 
